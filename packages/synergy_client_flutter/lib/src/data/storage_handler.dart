@@ -1,5 +1,7 @@
 import 'package:get_storage/get_storage.dart';
 
+/// For storing and retrieving data from local storage
+/// to maintain state between app restarts
 class StorageHandler {
   late GetStorage _storage;
 

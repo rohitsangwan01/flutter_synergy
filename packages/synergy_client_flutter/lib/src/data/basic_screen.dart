@@ -5,6 +5,7 @@ import 'package:synergy_client_dart/synergy_client_dart.dart';
 import 'package:synergy_client_flutter/src/data/keyboard_handler.dart';
 import 'package:synergy_client_flutter/src/synergy_client_flutter_controller.dart';
 
+/// BasicScreen implementation for SynergyClient
 class BasicScreen extends ScreenInterface {
   final SynergyClientController controller;
   BasicScreen(this.controller);

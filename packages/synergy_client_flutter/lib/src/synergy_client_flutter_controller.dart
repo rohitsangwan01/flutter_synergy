@@ -6,6 +6,7 @@ import 'package:synergy_client_flutter/src/data/storage_handler.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+/// Controller for SynergyClient, handles the connection and disconnection
 class SynergyClientController extends GetxController {
   TextEditingController serverIpController = TextEditingController();
   TextEditingController serverPortController = TextEditingController();

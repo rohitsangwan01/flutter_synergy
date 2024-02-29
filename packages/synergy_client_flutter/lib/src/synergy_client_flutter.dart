@@ -4,6 +4,9 @@ import 'package:synergy_client_flutter/src/synergy_client_flutter_controller.dar
 import 'package:synergy_client_flutter/src/widgets/connect_page.dart';
 import 'package:synergy_client_flutter/src/widgets/multi_hit_stack.dart';
 
+/// SynergyClientFlutter is the main widget for Synergy Client
+/// It wraps the child widget with `_SynergyClientFlutter` and auto initializes the `SynergyClientController`
+/// and setup connection to the server
 class SynergyClientFlutter extends StatefulWidget {
   final Widget child;
   final bool enabled;

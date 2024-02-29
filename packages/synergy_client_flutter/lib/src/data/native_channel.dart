@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:synergy_client_dart/synergy_client_dart.dart';
 import 'package:synergy_client_flutter/src/data/keyboard_handler.dart';
 
+/// For native communications using method channels
 class NativeChannel {
   final MethodChannel _channel = const MethodChannel('synergy_client_flutter');
 

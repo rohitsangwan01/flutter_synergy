@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:synergy_client_flutter/src/data/native_channel.dart';
 
+/// Handles keyboard events
 abstract class KeyboardHandler {
   // Returns the default keyboard handler for the current platform
   static KeyboardHandler? get defaultHandler {

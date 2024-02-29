@@ -4,6 +4,7 @@ import 'package:synergy_client_flutter/src/synergy_client_flutter_controller.dar
 import 'package:synergy_client_flutter/src/widgets/multi_hit_stack.dart';
 import 'package:synergy_client_flutter/synergy_client_flutter.dart';
 
+/// Connect page for Synergy Client
 class ConnectPage extends GetView<SynergyClientController> {
   ConnectPage({super.key});
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+/// Stack that allows multiple children to be hit tested
 class MultiHitStack extends Stack {
   const MultiHitStack({
     super.key,
