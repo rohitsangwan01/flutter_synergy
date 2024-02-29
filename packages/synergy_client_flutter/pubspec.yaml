@@ -1,0 +1,40 @@
+name: synergy_client_flutter
+description: Flutter implementation for synergy clients compatible with Synergy, Barrier, InputLeap
+version: 0.0.1
+repository: https://github.com/rohitsangwan01/flutter_synergy
+homepage: https://github.com/rohitsangwan01/flutter_synergy
+issue_tracker: https://github.com/rohitsangwan01/flutter_synergy/issues
+
+environment:
+  sdk: '>=3.2.5 <4.0.0'
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  synergy_client_dart: ^0.0.1
+
+dependency_overrides:
+  synergy_client_dart:
+    path: ../synergy_client_dart
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.rohit.synergy_client_flutter
+        pluginClass: SynergyClientFlutterPlugin
+      ios:
+        pluginClass: SynergyClientFlutterPlugin
+      linux:
+        pluginClass: SynergyClientFlutterPlugin
+      macos:
+        pluginClass: SynergyClientFlutterPlugin

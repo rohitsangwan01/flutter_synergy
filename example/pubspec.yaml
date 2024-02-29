@@ -1,0 +1,30 @@
+name: synergy_client_flutter_example
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.2.5 <4.0.0'
+
+dependencies: 
+  flutter: 
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  synergy_client_flutter:
+    path: ../packages/synergy_client_flutter
+
+
+# To change icon of the app checkout: flutter_launcher_icons.yaml file
+# to generate models or theme extensions : dart run build_runner build
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.13.1
+
+get_cli: 
+  sub_folder: false
+
+flutter: 
+  uses-material-design: true
+
+
