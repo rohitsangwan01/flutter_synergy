@@ -14,7 +14,7 @@
 
 Disable SSL in server ( Encryption not supported yet )
 
-To use with flutter, checkout [synergy_client_flutter](https://github.com/rohitsangwan01/flutter_synergy/blob/main/packages/synergy_client_flutter/README.md)
+To use with flutter, checkout [synergy_client_flutter](https://pub.dev/packages/synergy_client_flutter)
 
 Create a calls extending `ScreenInterface`
 

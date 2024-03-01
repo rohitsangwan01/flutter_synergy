@@ -14,7 +14,7 @@
 
 Disable SSL in server ( Encryption not supported yet )
 
-To use with dart only, checkout [synergy_client_dart](https://github.com/rohitsangwan01/flutter_synergy/tree/main/packages/synergy_client_dart)
+To use with dart only, checkout [synergy_client_dart](https://pub.dev/packages/synergy_client_dart)
 
 Wrap your app in SynergyClientFlutter, That's it, a floating button will appear in app
 tap on it to enter details and connect to Synergy
@@ -36,7 +36,7 @@ void main() async {
 
 ## Demo
 
-https://github.com/rohitsangwan01/flutter_synergy/assets/59526499/6cb086f2-b390-490a-b8e6-a95aeb5d2b17
+![flutter_synergy_demo](https://github.com/rohitsangwan01/flutter_synergy/assets/59526499/03b25072-6b7c-4a0b-9fb3-40840a88cf10)
 
 ## Note:
 

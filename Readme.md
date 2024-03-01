@@ -14,7 +14,7 @@
 
 Disable SSL in server ( Encryption not supported yet )
 
-### To use in Flutter, import [synergy_client_flutter](https://github.com/rohitsangwan01/flutter_synergy/tree/main/packages/synergy_client_flutter)
+### To use in Flutter, import [synergy_client_flutter](https://pub.dev/packages/synergy_client_flutter)
 
 Wrap your app in SynergyClientFlutter, That's it, a floating button will appear in app
 tap on it to enter details and connect to Synergy
@@ -34,7 +34,7 @@ void main() async {
 }
 ```
 
-### To use in pure Dart, import [synergy_client_dart](https://github.com/rohitsangwan01/flutter_synergy/tree/main/packages/synergy_client_dart)
+### To use in pure Dart, import [synergy_client_dart](https://pub.dev/packages/synergy_client_dart)
 
 Create a class extending `ScreenInterface`
 
