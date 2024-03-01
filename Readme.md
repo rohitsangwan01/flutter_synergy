@@ -67,7 +67,7 @@ Checkout complete [documentation](https://github.com/rohitsangwan01/flutter_syne
 
 ## Demo
 
-https://github.com/rohitsangwan01/flutter_synergy/assets/59526499/6cb086f2-b390-490a-b8e6-a95aeb5d2b17
+https://github.com/rohitsangwan01/flutter_synergy/assets/59526499/0cdb6eac-c937-4675-bdc2-ffff1ea0ff99
 
 ## Note:
 
