@@ -11,13 +11,37 @@ class ServerMessage {
     bodyBuffer = bodyBytes.buffer.asByteData();
   }
 
-  int readShort(int offset) => bodyBuffer.getInt16(offset, Endian.big);
+  int readShort(int offset) {
+    try {
+      return bodyBuffer.getInt16(offset, Endian.big);
+    } catch (e) {
+      return 0;
+    }
+  }
 
-  int readInt(int offset) => bodyBuffer.getInt32(offset, Endian.big);
+  int readInt(int offset) {
+    try {
+      return bodyBuffer.getInt32(offset, Endian.big);
+    } catch (e) {
+      return 0;
+    }
+  }
 
-  int readByte(int offset) => bodyBuffer.getUint8(offset);
+  int readByte(int offset) {
+    try {
+      return bodyBuffer.getUint8(offset);
+    } catch (e) {
+      return 0;
+    }
+  }
 
-  int readUnsignedShort(int offset) => bodyBuffer.getUint16(offset, Endian.big);
+  int readUnsignedShort(int offset) {
+    try {
+      return bodyBuffer.getUint16(offset, Endian.big);
+    } catch (e) {
+      return 0;
+    }
+  }
 
   @override
   String toString() {

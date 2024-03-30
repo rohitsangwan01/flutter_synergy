@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:synergy_client_dart/src/common/extensions.dart';
 import 'package:synergy_client_dart/src/common/logger.dart';
+import 'package:synergy_client_dart/src/interface/server_interface.dart';
 import 'package:synergy_client_dart/src/messages/message_type.dart';
 
 class MessageHeader {
@@ -43,7 +43,7 @@ class MessageHeader {
     }
   }
 
-  void write(Socket dout) {
+  void write(ServerInterface dout) {
     dataSize ??= 0;
     dout.writeInt(size + dataSize!);
     dout.writeBytes(utf8.encode(type.value));

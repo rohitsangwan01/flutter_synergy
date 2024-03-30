@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:synergy_client_dart/src/common/extensions.dart';
 import 'package:synergy_client_dart/src/common/logger.dart';
 import 'package:synergy_client_dart/src/common/message_data_output_stream.dart';
+import 'package:synergy_client_dart/src/interface/server_interface.dart';
 import 'package:synergy_client_dart/src/messages/message_header.dart';
 import 'package:synergy_client_dart/src/messages/message_type.dart';
 
@@ -32,7 +31,7 @@ abstract class Message {
   // Abstract method to write data to dataStream
   void writeData();
 
-  void write(Socket dout) {
+  void write(ServerInterface dout) {
     try {
       writeData();
       header.dataSize = dataStream.size;

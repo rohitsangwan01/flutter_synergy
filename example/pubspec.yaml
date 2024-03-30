@@ -12,6 +12,9 @@ dependencies:
   synergy_client_flutter:
     path: ../packages/synergy_client_flutter
 
+dependency_overrides:
+  synergy_client_dart:
+    path: ../packages/synergy_client_dart
 
 # To change icon of the app checkout: flutter_launcher_icons.yaml file
 # to generate models or theme extensions : dart run build_runner build

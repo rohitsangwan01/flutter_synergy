@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:synergy_client_dart/synergy_client_dart.dart';
 import 'package:synergy_client_dart/src/messages/info_message.dart';
 import 'package:synergy_client_dart/src/messages/keep_alive_message.dart';
@@ -7,7 +5,7 @@ import 'package:synergy_client_dart/src/messages/message_type.dart';
 import 'package:synergy_client_dart/src/common/extensions.dart';
 
 class ServerProxy {
-  Socket? dout;
+  ServerInterface? server;
   late ScreenInterface screen;
 
   void setScreen(ScreenInterface screen) {
@@ -32,7 +30,7 @@ class ServerProxy {
           Logger.log('Reset options');
           break;
         case MessageType.cKeepAlive:
-          dout?.writeMessage(KeepAliveMessage());
+          server?.writeMessage(KeepAliveMessage());
           break;
         case MessageType.cEnter:
           var x = msg.readShort(0);
@@ -141,7 +139,7 @@ class ServerProxy {
         cursorPosition: screen.getCursorPos(),
       );
       Logger.log('Sending client info: $clientInfo', LogLevel.debug);
-      dout?.writeMessage(
+      server?.writeMessage(
         InfoMessage(
           screenX: clientInfo.screenPosition.left,
           screenY: clientInfo.screenPosition.top,

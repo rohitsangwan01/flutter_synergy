@@ -69,8 +69,7 @@ class SynergyClientController extends GetxController {
       //  if (formKey.currentState?.validate() == false) return;
       await SynergyClientDart.connect(
         screen: screen,
-        serverIp: serverIp,
-        serverPort: serverPort,
+        synergyServer: SocketServer(serverIp, serverPort),
         clientName: clientName,
       );
     } catch (e) {
