@@ -3,9 +3,11 @@ import 'package:synergy_client_dart/synergy_client_dart.dart';
 void main(List<String> args) async {
   BasicScreen screen = BasicScreen();
 
+  SynergyClientDart client = SynergyClientDart();
+
   SocketServer server = SocketServer("0.0.0.0", 24800);
 
-  await SynergyClientDart.connect(
+  await client.connect(
     screen: screen,
     synergyServer: server,
     clientName: "flutter",

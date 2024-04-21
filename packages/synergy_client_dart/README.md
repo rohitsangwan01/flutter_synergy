@@ -27,9 +27,10 @@ class BasicScreen extends ScreenInterface {
 Connect with synergy using this screen interface
 
 ```dart
+var SynergyClientDart client = SynergyClientDart();
 var screen = BasicScreen();
 
-await SynergyClientDart.connect(
+await client.connect(
     screen: screen,
     serverIp: serverIp,
     serverPort: serverPort,
@@ -40,7 +41,7 @@ await SynergyClientDart.connect(
 To Disconnect
 
 ```dart
-SynergyClientDart.disconnect();
+client.disconnect();
 ```
 
 Checkout complete [documentation](https://github.com/rohitsangwan01/flutter_synergy/tree/main)

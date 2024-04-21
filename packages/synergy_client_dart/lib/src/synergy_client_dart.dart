@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:synergy_client_dart/src/interface/server_interface.dart';
 import 'package:synergy_client_dart/src/models/server_type.dart';
 import 'package:synergy_client_dart/synergy_client_dart.dart';
 import 'package:synergy_client_dart/src/messages/hello_back_message.dart';
@@ -14,19 +13,19 @@ import 'package:synergy_client_dart/src/common/extensions.dart';
 /// Connect with SynergyServer, we provide by default [SocketServer] but you can provide your own implementation as well
 /// [ServerInterface] is the interface to the screen, to receive all callbacks
 class SynergyClientDart {
-  static ServerInterface? _server;
-  static late String _clientName;
-  static final ServerProxy _serverProxy = ServerProxy();
-  static final _headerMessageSize = MessageHeader.messageTypeSize;
-  static final _helloMessageSize = HelloMessage.helloMessageSize;
+  ServerInterface? _server;
+  late String _clientName;
+  final ServerProxy _serverProxy = ServerProxy();
+  final _headerMessageSize = MessageHeader.messageTypeSize;
+  final _helloMessageSize = HelloMessage.helloMessageSize;
 
-  static Future<void> connect({
+  Future<void> connect({
     required ScreenInterface screen,
     required ServerInterface synergyServer,
     required String clientName,
   }) async {
     _serverProxy.setScreen(screen);
-    SynergyClientDart._clientName = clientName;
+    _clientName = clientName;
     _server = synergyServer;
 
     try {
@@ -55,20 +54,20 @@ class SynergyClientDart {
     }
   }
 
-  static void disconnect() {
+  void disconnect() {
     _server?.disconnect();
     _serverProxy.server = null;
   }
 
-  static void setLogLevel(LogLevel level) {
+  void setLogLevel(LogLevel level) {
     Logger.level = level;
   }
 
-  static void setLogHandler(LogHandler handler) {
+  void setLogHandler(LogHandler handler) {
     Logger.logHandler = handler;
   }
 
-  static void _handleSocket(Uint8List data) {
+  void _handleSocket(Uint8List data) {
     ByteData din = data.buffer.asByteData();
     int messageSize = din.getInt32(0, Endian.big);
     // check if the message size is valid

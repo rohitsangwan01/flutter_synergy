@@ -1,3 +1,7 @@
+## 0.1.0
+
+- Breaking change: SynergyClientDart methods now should be used by creating new SynergyClientDart objects, instead of static, to allow connecting multiple clients from same app
+
 ## 0.0.5
 
 - Add SocketServer in connect method

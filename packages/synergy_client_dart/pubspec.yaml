@@ -1,6 +1,6 @@
 name: synergy_client_dart
 description: A dart implementation for synergy clients compatible with Synergy, Barrier, InputLeap
-version: 0.0.5
+version: 0.1.0
 repository: https://github.com/rohitsangwan01/flutter_synergy
 homepage: https://github.com/rohitsangwan01/flutter_synergy
 issue_tracker: https://github.com/rohitsangwan01/flutter_synergy/issues

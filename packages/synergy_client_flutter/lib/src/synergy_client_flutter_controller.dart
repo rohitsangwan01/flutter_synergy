@@ -11,6 +11,7 @@ class SynergyClientController extends GetxController {
   TextEditingController serverIpController = TextEditingController();
   TextEditingController serverPortController = TextEditingController();
   TextEditingController clientNameController = TextEditingController();
+  late final SynergyClientDart client = SynergyClientDart();
 
   late BasicScreen screen;
   late StorageHandler _storage;
@@ -33,9 +34,9 @@ class SynergyClientController extends GetxController {
     _storage = StorageHandler();
     await _storage.init();
 
-    SynergyClientDart.setLogLevel(LogLevel.debug);
+    client.setLogLevel(LogLevel.debug);
 
-    SynergyClientDart.setLogHandler((message, LogLevel? level) {
+    client.setLogHandler((message, LogLevel? level) {
       logs.add(message);
     });
 
@@ -67,7 +68,7 @@ class SynergyClientController extends GetxController {
       );
 
       //  if (formKey.currentState?.validate() == false) return;
-      await SynergyClientDart.connect(
+      await client.connect(
         screen: screen,
         synergyServer: SocketServer(serverIp, serverPort),
         clientName: clientName,
@@ -77,7 +78,7 @@ class SynergyClientController extends GetxController {
     }
   }
 
-  void disconnect() => SynergyClientDart.disconnect();
+  void disconnect() => client.disconnect();
 
   void handleShape(double width, double height) =>
       screen.handleShape(width, height);
